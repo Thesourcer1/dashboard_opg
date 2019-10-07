@@ -1,0 +1,156 @@
+@import "variabler";
+@import "dashboard";
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, Arial, Calibri, sans-serif;
+  background: $purpleblack;
+}
+
+#sidemenu{
+  background: $darkpurple;
+  width: 280px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  nav{
+    padding-top: 100px;
+    a{
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 15px 30px;
+      font-weight: 300;
+      transition: all 0.3s ease-in-out;
+
+      &:hover{
+        border-right: 5px solid white;
+        padding: 15px 30px 15px 32px;
+        .fa {
+          color: $green;
+        }
+      }
+
+      .fa {
+        color: white;
+        font-size: 1.4rem;
+        margin-right: 0.8rem;
+        display: inline-block;
+        width: 30px;
+        position: relative;
+        top: 2px;
+      }
+
+      &.active {
+        border-right: 5px solid white;
+        padding: 15px 30px 15px 32px;
+
+        .fa {
+          color: $green;
+        }
+      }
+    }
+  }
+}
+
+header {
+  margin-left: 270px;
+  margin-right: -8px;
+  margin-top: -8px;
+  padding: 28px;
+  background-color: $darkpurple;
+
+  .search {
+    display: inline-block;
+    width: 50%;
+    border-radius: 20px;
+
+    .fa {
+      color: desaturate($purple, 70);
+    }
+
+    input[type="text"] {
+      background: $purpleblack;
+      border: none;
+      font-size: 1.3rem;
+      color: white;
+      padding: 5px;
+      font-weight: 100;
+      border-radius: 20px;
+      width: 50%;
+      margin-right: 6px;
+
+    }
+
+  }
+  .bruger {
+    display: inline-block;
+    float: right;
+    padding: 5px;
+    a {
+      display: inline-block;
+      padding-right: 20px;
+      text-decoration: none;
+      vertical-align: top;
+      top: 6px;
+      height: 30px;
+
+      &.notifikation {
+        position: relative;
+      }
+
+      .circle {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: $green;
+        color: white;
+        position: absolute;
+        top: -8px;
+        left: 11px;
+      }
+    }
+
+    .bruger-img {
+      background-color: $green;
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .fa {
+      color: desaturate($purple, 70);
+    }
+    .fa-caret-down {
+      position: relative;
+      top:-8px;
+    }
+  }
+}
+input:active,
+input:focus,
+textarea:focus {
+  background: $darkpurple;
+  outline: none;
+}
+
+section {
+  .chart {
+    position: relative;
+    display: inline-block;
+    margin: 20px 10px;
+    color: #999;
+    font-size: 14px;
+    text-align: center;
+  }
+  .chart canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
